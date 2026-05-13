@@ -17,37 +17,37 @@ const CAT_ICONS = {
 const CATEGORIES = ["Tất cả", "Cà phê", "Trà", "Sinh tố", "Ăn vặt", "Nước ngọt"];
 
 const MENU = [
-  { id: 1, name: "Cà phê đen", cat: "Cà phê", price: 20000, unit: "ly" },
-  { id: 2, name: "Cà phê sữa", cat: "Cà phê", price: 25000, unit: "ly" },
-  { id: 3, name: "Bạc xỉu", cat: "Cà phê", price: 28000, unit: "ly" },
-  { id: 4, name: "Cappuccino", cat: "Cà phê", price: 45000, unit: "ly" },
-  { id: 5, name: "Latte", cat: "Cà phê", price: 48000, unit: "ly" },
-  { id: 6, name: "Americano", cat: "Cà phê", price: 40000, unit: "ly" },
-  { id: 7, name: "Cold Brew", cat: "Cà phê", price: 50000, unit: "ly" },
-  { id: 8, name: "Trà đào", cat: "Trà", price: 35000, unit: "ly" },
-  { id: 9, name: "Trà vải", cat: "Trà", price: 35000, unit: "ly" },
-  { id: 10, name: "Trà sữa trân châu", cat: "Trà", price: 40000, unit: "ly" },
-  { id: 11, name: "Trà chanh", cat: "Trà", price: 25000, unit: "ly" },
-  { id: 12, name: "Trà hoa cúc", cat: "Trà", price: 30000, unit: "ly" },
-  { id: 13, name: "Sinh tố bơ", cat: "Sinh tố", price: 45000, unit: "ly" },
-  { id: 14, name: "Sinh tố dâu", cat: "Sinh tố", price: 40000, unit: "ly" },
-  { id: 15, name: "Sinh tố xoài", cat: "Sinh tố", price: 40000, unit: "ly" },
-  { id: 16, name: "Sinh tố chuối", cat: "Sinh tố", price: 35000, unit: "ly" },
-  { id: 17, name: "Bánh mì", cat: "Ăn vặt", price: 25000, unit: "ổ" },
-  { id: 18, name: "Bánh croissant", cat: "Ăn vặt", price: 35000, unit: "cái" },
-  { id: 19, name: "Bánh flan", cat: "Ăn vặt", price: 20000, unit: "cái" },
-  { id: 20, name: "Khoai tây chiên", cat: "Ăn vặt", price: 30000, unit: "phần" },
-  { id: 21, name: "Coca Cola", cat: "Nước ngọt", price: 15000, unit: "lon" },
-  { id: 22, name: "Pepsi", cat: "Nước ngọt", price: 15000, unit: "lon" },
-  { id: 23, name: "7Up", cat: "Nước ngọt", price: 15000, unit: "lon" },
-  { id: 24, name: "Nước suối", cat: "Nước ngọt", price: 10000, unit: "chai" },
+  { id: 1, name: "Cà phê đen", cat: "Cà phê", price: 20000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 2, name: "Cà phê sữa", cat: "Cà phê", price: 25000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 3, name: "Bạc xỉu", cat: "Cà phê", price: 28000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 4, name: "Cappuccino", cat: "Cà phê", price: 45000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 5, name: "Latte", cat: "Cà phê", price: 48000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 6, name: "Americano", cat: "Cà phê", price: 40000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 7, name: "Cold Brew", cat: "Cà phê", price: 50000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 8, name: "Trà đào", cat: "Trà", price: 35000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 9, name: "Trà vải", cat: "Trà", price: 35000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 10, name: "Trà sữa trân châu", cat: "Trà", price: 40000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 11, name: "Trà chanh", cat: "Trà", price: 25000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 12, name: "Trà hoa cúc", cat: "Trà", price: 30000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 13, name: "Sinh tố bơ", cat: "Sinh tố", price: 45000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 14, name: "Sinh tố dâu", cat: "Sinh tố", price: 40000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 15, name: "Sinh tố xoài", cat: "Sinh tố", price: 40000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 16, name: "Sinh tố chuối", cat: "Sinh tố", price: 35000, unit: "ly", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 17, name: "Bánh mì", cat: "Ăn vặt", price: 25000, unit: "ổ", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 18, name: "Bánh croissant", cat: "Ăn vặt", price: 35000, unit: "cái", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 19, name: "Bánh flan", cat: "Ăn vặt", price: 20000, unit: "cái", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 20, name: "Khoai tây chiên", cat: "Ăn vặt", price: 30000, unit: "phần", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 21, name: "Coca Cola", cat: "Nước ngọt", price: 15000, unit: "lon", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 22, name: "Pepsi", cat: "Nước ngọt", price: 15000, unit: "lon", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 23, name: "7Up", cat: "Nước ngọt", price: 15000, unit: "lon", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
+  { id: 24, name: "Nước suối", cat: "Nước ngọt", price: 10000, unit: "chai", image: "https://res.cloudinary.com/dvxbqlxmq/image/upload/w_300,h_200,c_fill,q_auto,f_auto/v1778644759/C%C3%A1_Th%C3%A1c_L%C3%A1c_udzdx0.png" },
 ];
 
 const SHOP = {
   name: "Minh Ngọc Quán",
   address: "123 Đường Lê Lợi, TP. Vũng Tàu",
   phone: "0909 123 456",
-  wifi: "CafeABC@2024",
+  // wifi: "CafeABC@2024",
 };
 
 const ACCENT = "#c9622b";
@@ -106,7 +106,6 @@ ${discountAmt > 0 ? `
 ` : ""}
 <div class="total-row"><span>TỔNG CỘNG:</span><span>${new Intl.NumberFormat("vi-VN").format(total - discountAmt)}đ</span></div>
 <div class="solid"></div>
-<div class="footer">WiFi: ${SHOP.wifi}</div>
 <div class="footer" style="margin-top:6px">*** Cảm ơn quý khách! ***</div>
 <div class="footer">Hẹn gặp lại lần sau</div>
 <br/><br/></body></html>`;
@@ -251,16 +250,24 @@ export default function App() {
             const inOrder = order.find(o => o.id === item.id);
             return (
               <div key={item.id} onClick={() => openModal(item)}
-                style={{ background: "#fff", borderRadius: 14, cursor: "pointer", padding: "13px 12px", border: inOrder ? `2px solid ${ACCENT}` : "1.5px solid #e8e3db", position: "relative", transition: "all 0.15s", userSelect: "none", WebkitTapHighlightColor: "transparent" }}
+                style={{ background: "#fff", borderRadius: 14, cursor: "pointer", padding: 0, border: inOrder ? `2px solid ${ACCENT}` : "1.5px solid #e8e3db", position: "relative", transition: "all 0.15s", userSelect: "none", WebkitTapHighlightColor: "transparent" }}
               >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "100%", height: 90, objectFit: "cover", display: "block" }}
+                  onError={e => { e.target.style.display = "none"; }} // ẩn nếu lỗi
+                />
                 {inOrder && (
                   <div style={{ position: "absolute", top: -8, right: -8, background: ACCENT, color: "#fff", borderRadius: 12, width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800 }}>
                     {inOrder.qty}
                   </div>
                 )}
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", lineHeight: 1.3, marginBottom: 8 }}>{item.name}</div>
-                <div style={{ fontSize: 14, fontWeight: 800, color: ACCENT }}>{fmt(item.price)}</div>
-                <div style={{ fontSize: 11, color: "#bbb", marginTop: 2 }}>/{item.unit}</div>
+                <div style={{ padding: "10px 12px" }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a", lineHeight: 1.3, marginBottom: 8 }}>{item.name}</div>
+                  <div style={{ fontSize: 14, fontWeight: 800, color: ACCENT }}>{fmt(item.price)}</div>
+                  <div style={{ fontSize: 11, color: "#bbb", marginTop: 2 }}>/{item.unit}</div>
+                </div>
               </div>
             );
           })}
@@ -300,6 +307,19 @@ export default function App() {
             order.map(item => (
               <div key={item.id} style={{ padding: "11px 18px", borderBottom: `1px solid ${DARK3}` }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 6 }}>
+                  {/* ── ẢNH THUMBNAIL ── */}
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    style={{
+                      width: 44, height: 44,
+                      borderRadius: 8,
+                      objectFit: "cover",
+                      flexShrink: 0,
+                      background: DARK3,  // màu nền khi ảnh đang load
+                    }}
+                    onError={e => { e.target.style.display = "none"; }}
+                  />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: "#f0ece6", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{item.name}</div>
                     {item.note && <div style={{ fontSize: 11, color: "#666", marginTop: 2 }}>» {item.note}</div>}
@@ -418,6 +438,18 @@ export default function App() {
           style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.55)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: "0 16px" }}>
           <div onClick={e => e.stopPropagation()}
             style={{ background: "#fff", borderRadius: 20, padding: "26px 22px 22px", width: "100%", maxWidth: 360, position: "relative" }}>
+            <img
+              src={modal.item.image}
+              alt={modal.item.name}
+              style={{
+                width: "100%", height: 160, objectFit: "cover",
+                borderRadius: "14px 14px 0 0",
+                margin: "-26px -22px 18px",   // bù lại padding của modal
+                display: "block",
+                width: "calc(100% + 44px)",
+              }}
+              onError={e => { e.target.style.display = "none"; }}
+            />
             <button onClick={() => setModal(null)}
               style={{ position: "absolute", top: 14, right: 14, background: "#f5f3ef", border: "none", borderRadius: 8, cursor: "pointer", padding: 6, lineHeight: 1 }}>
               <X size={16} color="#888" />
