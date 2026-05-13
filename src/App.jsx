@@ -233,7 +233,7 @@ export default function App() {
         </div>
 
         {/* Menu grid */}
-        <div style={{ flex: 1, overflowY: "auto", padding: "14px 16px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 10, alignContent: "start", WebkitOverflowScrolling: "touch" }}>
+        <div style={{ flex: 1, overflowY: "auto", padding: isMobile ? "14px 16px 80px" : "14px 16px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 10, alignContent: "start", WebkitOverflowScrolling: "touch" }}>
           {filtered.map(item => {
             const inOrder = order.find(o => o.id === item.id);
             return (
@@ -306,7 +306,7 @@ export default function App() {
         </div>
 
         {/* Footer / actions */}
-        <div style={{ padding: "14px 18px", borderTop: `1px solid ${DARK3}`, flexShrink: 0 }}>
+        <div style={{ padding: isMobile ? "14px 18px 78px" : "14px 18px", borderTop: `1px solid ${DARK3}`, flexShrink: 0 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 14 }}>
             <span style={{ fontSize: 12, color: "#888" }}>TỔNG CỘNG</span>
             <span style={{ fontSize: 22, fontWeight: 900, color: "#fff" }}>{fmt(total)}</span>
