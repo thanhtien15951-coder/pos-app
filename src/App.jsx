@@ -17,30 +17,30 @@ const CAT_ICONS = {
 const CATEGORIES = ["Tất cả", "Cà phê", "Trà", "Sinh tố", "Ăn vặt", "Nước ngọt"];
 
 const MENU = [
-  { id: 1,  name: "Cà phê đen",        cat: "Cà phê",    price: 20000, unit: "ly"    },
-  { id: 2,  name: "Cà phê sữa",        cat: "Cà phê",    price: 25000, unit: "ly"    },
-  { id: 3,  name: "Bạc xỉu",           cat: "Cà phê",    price: 28000, unit: "ly"    },
-  { id: 4,  name: "Cappuccino",         cat: "Cà phê",    price: 45000, unit: "ly"    },
-  { id: 5,  name: "Latte",             cat: "Cà phê",    price: 48000, unit: "ly"    },
-  { id: 6,  name: "Americano",         cat: "Cà phê",    price: 40000, unit: "ly"    },
-  { id: 7,  name: "Cold Brew",         cat: "Cà phê",    price: 50000, unit: "ly"    },
-  { id: 8,  name: "Trà đào",           cat: "Trà",       price: 35000, unit: "ly"    },
-  { id: 9,  name: "Trà vải",           cat: "Trà",       price: 35000, unit: "ly"    },
-  { id: 10, name: "Trà sữa trân châu", cat: "Trà",       price: 40000, unit: "ly"    },
-  { id: 11, name: "Trà chanh",         cat: "Trà",       price: 25000, unit: "ly"    },
-  { id: 12, name: "Trà hoa cúc",       cat: "Trà",       price: 30000, unit: "ly"    },
-  { id: 13, name: "Sinh tố bơ",        cat: "Sinh tố",   price: 45000, unit: "ly"    },
-  { id: 14, name: "Sinh tố dâu",       cat: "Sinh tố",   price: 40000, unit: "ly"    },
-  { id: 15, name: "Sinh tố xoài",      cat: "Sinh tố",   price: 40000, unit: "ly"    },
-  { id: 16, name: "Sinh tố chuối",     cat: "Sinh tố",   price: 35000, unit: "ly"    },
-  { id: 17, name: "Bánh mì",           cat: "Ăn vặt",    price: 25000, unit: "ổ"     },
-  { id: 18, name: "Bánh croissant",    cat: "Ăn vặt",    price: 35000, unit: "cái"   },
-  { id: 19, name: "Bánh flan",         cat: "Ăn vặt",    price: 20000, unit: "cái"   },
-  { id: 20, name: "Khoai tây chiên",   cat: "Ăn vặt",    price: 30000, unit: "phần"  },
-  { id: 21, name: "Coca Cola",         cat: "Nước ngọt", price: 15000, unit: "lon"   },
-  { id: 22, name: "Pepsi",             cat: "Nước ngọt", price: 15000, unit: "lon"   },
-  { id: 23, name: "7Up",               cat: "Nước ngọt", price: 15000, unit: "lon"   },
-  { id: 24, name: "Nước suối",         cat: "Nước ngọt", price: 10000, unit: "chai"  },
+  { id: 1, name: "Cà phê đen", cat: "Cà phê", price: 20000, unit: "ly" },
+  { id: 2, name: "Cà phê sữa", cat: "Cà phê", price: 25000, unit: "ly" },
+  { id: 3, name: "Bạc xỉu", cat: "Cà phê", price: 28000, unit: "ly" },
+  { id: 4, name: "Cappuccino", cat: "Cà phê", price: 45000, unit: "ly" },
+  { id: 5, name: "Latte", cat: "Cà phê", price: 48000, unit: "ly" },
+  { id: 6, name: "Americano", cat: "Cà phê", price: 40000, unit: "ly" },
+  { id: 7, name: "Cold Brew", cat: "Cà phê", price: 50000, unit: "ly" },
+  { id: 8, name: "Trà đào", cat: "Trà", price: 35000, unit: "ly" },
+  { id: 9, name: "Trà vải", cat: "Trà", price: 35000, unit: "ly" },
+  { id: 10, name: "Trà sữa trân châu", cat: "Trà", price: 40000, unit: "ly" },
+  { id: 11, name: "Trà chanh", cat: "Trà", price: 25000, unit: "ly" },
+  { id: 12, name: "Trà hoa cúc", cat: "Trà", price: 30000, unit: "ly" },
+  { id: 13, name: "Sinh tố bơ", cat: "Sinh tố", price: 45000, unit: "ly" },
+  { id: 14, name: "Sinh tố dâu", cat: "Sinh tố", price: 40000, unit: "ly" },
+  { id: 15, name: "Sinh tố xoài", cat: "Sinh tố", price: 40000, unit: "ly" },
+  { id: 16, name: "Sinh tố chuối", cat: "Sinh tố", price: 35000, unit: "ly" },
+  { id: 17, name: "Bánh mì", cat: "Ăn vặt", price: 25000, unit: "ổ" },
+  { id: 18, name: "Bánh croissant", cat: "Ăn vặt", price: 35000, unit: "cái" },
+  { id: 19, name: "Bánh flan", cat: "Ăn vặt", price: 20000, unit: "cái" },
+  { id: 20, name: "Khoai tây chiên", cat: "Ăn vặt", price: 30000, unit: "phần" },
+  { id: 21, name: "Coca Cola", cat: "Nước ngọt", price: 15000, unit: "lon" },
+  { id: 22, name: "Pepsi", cat: "Nước ngọt", price: 15000, unit: "lon" },
+  { id: 23, name: "7Up", cat: "Nước ngọt", price: 15000, unit: "lon" },
+  { id: 24, name: "Nước suối", cat: "Nước ngọt", price: 10000, unit: "chai" },
 ];
 
 const SHOP = {
@@ -51,12 +51,12 @@ const SHOP = {
 };
 
 const ACCENT = "#c9622b";
-const DARK   = "#1c1c22";
-const DARK2  = "#28282f";
-const DARK3  = "#323239";
+const DARK = "#1c1c22";
+const DARK2 = "#28282f";
+const DARK3 = "#323239";
 
 /* ─── Receipt HTML ─── */
-function generateReceiptHTML(order, tableNo, total) {
+function generateReceiptHTML(order, tableNo, total, discountAmt, discountLabel) {
   const now = new Date();
   const dateStr = now.toLocaleDateString("vi-VN");
   const timeStr = now.toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" });
@@ -97,9 +97,14 @@ ${order.map(item => `
 ${item.note ? `<div class="note">» ${item.note}</div>` : ""}
 `).join("")}
 <div class="dash"></div>
-<div class="row"><span>Số món:</span><span>${order.reduce((s,i)=>s+i.qty,0)} phần</span></div>
+<div class="row"><span>Số món:</span><span>${order.reduce((s, i) => s + i.qty, 0)} phần</span></div>
 <div class="solid"></div>
-<div class="total-row"><span>TỔNG CỘNG:</span><span>${new Intl.NumberFormat("vi-VN").format(total)}đ</span></div>
+${discountAmt > 0 ? `
+<div class="row"><span>Tạm tính:</span><span>${new Intl.NumberFormat("vi-VN").format(total)}đ</span></div>
+<div class="row" style="color:#2a7a2a"><span>Giảm giá${discountLabel}:</span><span>- ${new Intl.NumberFormat("vi-VN").format(discountAmt)}đ</span></div>
+<div class="dash"></div>
+` : ""}
+<div class="total-row"><span>TỔNG CỘNG:</span><span>${new Intl.NumberFormat("vi-VN").format(total - discountAmt)}đ</span></div>
 <div class="solid"></div>
 <div class="footer">WiFi: ${SHOP.wifi}</div>
 <div class="footer" style="margin-top:6px">*** Cảm ơn quý khách! ***</div>
@@ -131,13 +136,14 @@ const s = {
 /* ══════════════════════════════════════════════════════ */
 export default function App() {
   const [selectedCat, setSelectedCat] = useState("Tất cả");
-  const [order, setOrder]             = useState([]);
-  const [modal, setModal]             = useState(null);
-  const [tableNo, setTableNo]         = useState("1");
-  const [printed, setPrinted]         = useState(false);
+  const [order, setOrder] = useState([]);
+  const [modal, setModal] = useState(null);
+  const [tableNo, setTableNo] = useState("1");
+  const [printed, setPrinted] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [activeTab, setActiveTab]     = useState("menu"); // "menu" | "order"
-  const [isMobile, setIsMobile]       = useState(false);
+  const [discount, setDiscount] = useState({ enabled: false, type: "percent", value: "" });
+  const [activeTab, setActiveTab] = useState("menu"); // "menu" | "order"
+  const [isMobile, setIsMobile] = useState(false);
 
   /* Detect narrow viewport */
   useEffect(() => {
@@ -147,9 +153,15 @@ export default function App() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  const filtered   = selectedCat === "Tất cả" ? MENU : MENU.filter(m => m.cat === selectedCat);
-  const total      = order.reduce((s, i) => s + i.price * i.qty, 0);
+  const filtered = selectedCat === "Tất cả" ? MENU : MENU.filter(m => m.cat === selectedCat);
+  const total = order.reduce((s, i) => s + i.price * i.qty, 0);
   const orderCount = order.reduce((s, i) => s + i.qty, 0);
+  const discountAmt = discount.enabled && Number(discount.value) > 0
+    ? discount.type === "percent"
+      ? Math.round(total * Math.min(Number(discount.value), 100) / 100)
+      : Math.min(Number(discount.value), total)
+    : 0;
+  const finalTotal = total - discountAmt;
 
   const openModal = (item) => {
     const existing = order.find(o => o.id === item.id);
@@ -175,8 +187,9 @@ export default function App() {
 
   const handlePrint = () => {
     if (order.length === 0) return;
-    const html = generateReceiptHTML(order, tableNo, total);
-    const win  = window.open("", "_blank", "width=400,height=600");
+    const discountLabel = discount.type === "percent" ? ` (${discount.value}%)` : "";
+    const html = generateReceiptHTML(order, tableNo, total, discountAmt, discountLabel);
+    const win = window.open("", "_blank", "width=400,height=600");
     if (win) { win.document.write(html); win.document.close(); win.focus(); setTimeout(() => win.print(), 400); }
     setPrinted(true);
     setShowSuccess(true);
@@ -220,7 +233,7 @@ export default function App() {
         {/* Category tabs */}
         <div style={{ background: "#fff", display: "flex", gap: 6, padding: "8px 16px", borderBottom: "1px solid #e8e3db", overflowX: "auto", flexShrink: 0, WebkitOverflowScrolling: "touch" }}>
           {CATEGORIES.map(cat => {
-            const Icon   = CAT_ICONS[cat];
+            const Icon = CAT_ICONS[cat];
             const active = selectedCat === cat;
             return (
               <button key={cat} onClick={() => setSelectedCat(cat)}
@@ -307,9 +320,58 @@ export default function App() {
 
         {/* Footer / actions */}
         <div style={{ padding: isMobile ? "14px 18px 78px" : "14px 18px", borderTop: `1px solid ${DARK3}`, flexShrink: 0 }}>
+
+          {/* ── Discount toggle ── */}
+          <div style={{ marginBottom: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: discount.enabled ? 10 : 0 }}>
+              <span style={{ fontSize: 12, color: "#888" }}>GIẢM GIÁ</span>
+              <button onClick={() => setDiscount(d => ({ ...d, enabled: !d.enabled, value: "" }))}
+                style={{ width: 40, height: 22, borderRadius: 11, border: "none", cursor: "pointer", transition: "background 0.2s", background: discount.enabled ? ACCENT : "#444", position: "relative", flexShrink: 0 }}>
+                <div style={{ width: 16, height: 16, borderRadius: 8, background: "#fff", position: "absolute", top: 3, transition: "left 0.2s", left: discount.enabled ? 21 : 3 }} />
+              </button>
+            </div>
+
+            {discount.enabled && (
+              <div style={{ display: "flex", gap: 6 }}>
+                {/* Type toggle */}
+                <div style={{ display: "flex", borderRadius: 8, overflow: "hidden", border: `1px solid ${DARK3}`, flexShrink: 0 }}>
+                  {[["percent", "%"], ["fixed", "đ"]].map(([type, label]) => (
+                    <button key={type} onClick={() => setDiscount(d => ({ ...d, type, value: "" }))}
+                      style={{ padding: "7px 13px", border: "none", cursor: "pointer", fontSize: 13, fontWeight: 700, transition: "all 0.15s", background: discount.type === type ? ACCENT : DARK2, color: discount.type === type ? "#fff" : "#666" }}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                {/* Value input */}
+                <input
+                  type="number" min="0"
+                  max={discount.type === "percent" ? 100 : undefined}
+                  value={discount.value}
+                  onChange={e => setDiscount(d => ({ ...d, value: e.target.value }))}
+                  placeholder={discount.type === "percent" ? "0 – 100" : "Số tiền"}
+                  style={{ flex: 1, background: DARK2, border: `1px solid ${DARK3}`, borderRadius: 8, padding: "7px 12px", color: "#fff", fontSize: 13, outline: "none", fontFamily: "inherit" }}
+                />
+              </div>
+            )}
+          </div>
+
+          {/* ── Totals ── */}
+          {discountAmt > 0 && (
+            <>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
+                <span style={{ fontSize: 12, color: "#888" }}>TẠMTÍNH</span>
+                <span style={{ fontSize: 14, color: "#777" }}>{fmt(total)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
+                <span style={{ fontSize: 12, color: "#5db85d" }}>GIẢM GIÁ{discount.type === "percent" ? ` (${discount.value}%)` : ""}</span>
+                <span style={{ fontSize: 14, color: "#5db85d", fontWeight: 700 }}>− {fmt(discountAmt)}</span>
+              </div>
+              <div style={{ borderTop: `1px solid ${DARK3}`, marginBottom: 10 }} />
+            </>
+          )}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 14 }}>
             <span style={{ fontSize: 12, color: "#888" }}>TỔNG CỘNG</span>
-            <span style={{ fontSize: 22, fontWeight: 900, color: "#fff" }}>{fmt(total)}</span>
+            <span style={{ fontSize: 22, fontWeight: 900, color: "#fff" }}>{fmt(finalTotal)}</span>
           </div>
 
           <button onClick={handlePrint} disabled={order.length === 0}
