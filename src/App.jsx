@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import {
   ShoppingCart, Plus, Minus, X, Printer, RotateCcw,
-  Coffee, Leaf, Zap, UtensilsCrossed, Wine, LayoutGrid,
+  Coffee, Leaf, Zap, UtensilsCrossed, Wine, LayoutGrid, Send
 } from "lucide-react";
 
 const fmt = (n) => new Intl.NumberFormat("vi-VN").format(n) + "đ";
 
 const CAT_ICONS = {
-  "Cà phê": Coffee,
-  "Trà": Leaf,
-  "Sinh tố": Zap,
-  "Ăn vặt": UtensilsCrossed,
-  "Nước ngọt": Wine,
+  "Lẩu": UtensilsCrossed,
+  "Mì": LayoutGrid,
+  "Ăn vặt": Zap,
+  "Trà sữa": Coffee,
+  "Nước giải khát": Leaf,
+  "Nước có cồn": Wine,
 };
 
 import { SHOP, CATEGORIES, MENU } from "./menuData";
@@ -22,6 +23,28 @@ const ACCENT = "#c9622b";
 const DARK = "#1c1c22";
 const DARK2 = "#28282f";
 const DARK3 = "#323239";
+
+const TG_TOKEN = "8717734348:AAEC8Fwyjld19iNns7eNbO7X3NWmlZmEuec";
+const TG_CHAT = "8662356940";
+
+async function sendToTelegram(order, tableNo, total, discountAmt, discount) {
+  const lines = order
+    .map(i => `  • ${i.name} ×${i.qty}${i.note ? ` _(${i.note})_` : ""} — *${fmt(i.price * i.qty)}*`)
+    .join("\n");
+  const time = new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" });
+  const discountLine = discountAmt > 0
+    ? `\n💸 Giảm giá${discount.type === "percent" ? ` (${discount.value}%)` : ""}: *-${fmt(discountAmt)}*`
+    : "";
+  const text =
+    `🧾 *HÓA ĐƠN — BÀN ${tableNo}*\n🕐 ${time}\n${"─".repeat(28)}\n` +
+    `${lines}\n${"─".repeat(28)}${discountLine}\n💰 *TỔNG CỘNG: ${fmt(total - discountAmt)}*`;
+  const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: TG_CHAT, text, parse_mode: "Markdown" }),
+  });
+  if (!res.ok) throw new Error("Telegram error");
+}
 
 /* ─── Receipt HTML ─── */
 function generateReceiptHTML(order, tableNo, total, discountAmt, discountLabel) {
@@ -111,6 +134,7 @@ export default function App() {
   const [discount, setDiscount] = useState({ enabled: false, type: "percent", value: "" });
   const [activeTab, setActiveTab] = useState("menu"); // "menu" | "order"
   const [isMobile, setIsMobile] = useState(false);
+  const [tgLoading, setTgLoading] = useState(false);
 
   /* Detect narrow viewport */
   useEffect(() => {
@@ -161,6 +185,20 @@ export default function App() {
     setPrinted(true);
     setShowSuccess(true);
     setTimeout(() => setShowSuccess(false), 2500);
+  };
+
+  const handleSendTelegram = async () => {
+    if (order.length === 0) return;
+    setTgLoading(true);
+    try {
+      await sendToTelegram(order, tableNo, total, discountAmt, discount);
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2500);
+    } catch {
+      alert("❌ Gửi Telegram thất bại!");
+    } finally {
+      setTgLoading(false);
+    }
   };
 
   const handleReset = () => {
@@ -220,12 +258,6 @@ export default function App() {
               <div key={item.id} onClick={() => openModal(item)}
                 style={{ background: "#fff", borderRadius: 14, cursor: "pointer", padding: 0, border: inOrder ? `2px solid ${ACCENT}` : "1.5px solid #e8e3db", position: "relative", transition: "all 0.15s", userSelect: "none", WebkitTapHighlightColor: "transparent" }}
               >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  style={{ width: "100%", height: 90, objectFit: "cover", display: "block" }}
-                  onError={e => { e.target.style.display = "none"; }} // ẩn nếu lỗi
-                />
                 {inOrder && (
                   <div style={{ position: "absolute", top: -8, right: -8, background: ACCENT, color: "#fff", borderRadius: 12, width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 800 }}>
                     {inOrder.qty}
@@ -275,19 +307,6 @@ export default function App() {
             order.map(item => (
               <div key={item.id} style={{ padding: "11px 18px", borderBottom: `1px solid ${DARK3}` }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 6 }}>
-                  {/* ── ẢNH THUMBNAIL ── */}
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    style={{
-                      width: 44, height: 44,
-                      borderRadius: 8,
-                      objectFit: "cover",
-                      flexShrink: 0,
-                      background: DARK3,  // màu nền khi ảnh đang load
-                    }}
-                    onError={e => { e.target.style.display = "none"; }}
-                  />
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 600, color: "#f0ece6", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{item.name}</div>
                     {item.note && <div style={{ fontSize: 11, color: "#666", marginTop: 2 }}>» {item.note}</div>}
@@ -368,6 +387,19 @@ export default function App() {
             {printed ? "In lại hóa đơn" : "In hóa đơn (80mm)"}
           </button>
 
+          <button onClick={handleSendTelegram} disabled={order.length === 0 || tgLoading}
+            style={{
+              width: "100%", padding: "11px 0", borderRadius: 12, border: "none",
+              cursor: order.length === 0 || tgLoading ? "not-allowed" : "pointer",
+              background: order.length === 0 ? "#333" : "#1f7bbf",
+              color: order.length === 0 ? "#666" : "#fff",
+              fontSize: 14, fontWeight: 700, display: "flex", alignItems: "center",
+              justifyContent: "center", gap: 8, marginBottom: 8, opacity: tgLoading ? 0.7 : 1
+            }}>
+            <Send size={15} />
+            {tgLoading ? "Đang gửi..." : "Gửi Telegram cho chủ quán"}
+          </button>
+
           <button onClick={handleReset}
             style={{ width: "100%", padding: "9px 0", borderRadius: 10, border: `1px solid ${DARK3}`, cursor: "pointer", background: "transparent", color: "#777", fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 6, transition: "all 0.15s" }}>
             <RotateCcw size={13} />
@@ -406,18 +438,6 @@ export default function App() {
           style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.55)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: "0 16px" }}>
           <div onClick={e => e.stopPropagation()}
             style={{ background: "#fff", borderRadius: 20, padding: "26px 22px 22px", width: "100%", maxWidth: 360, position: "relative" }}>
-            <img
-              src={modal.item.image}
-              alt={modal.item.name}
-              style={{
-                width: "100%", height: 160, objectFit: "cover",
-                borderRadius: "14px 14px 0 0",
-                margin: "-26px -22px 18px",   // bù lại padding của modal
-                display: "block",
-                width: "calc(100% + 44px)",
-              }}
-              onError={e => { e.target.style.display = "none"; }}
-            />
             <button onClick={() => setModal(null)}
               style={{ position: "absolute", top: 14, right: 14, background: "#f5f3ef", border: "none", borderRadius: 8, cursor: "pointer", padding: 6, lineHeight: 1 }}>
               <X size={16} color="#888" />
